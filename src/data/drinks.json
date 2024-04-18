@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "imgurl": "https://www.coca-cola.com/content/dam/onexp/kz/ru/homepage-images/brands/coca-cola/coca-cola-zero-sugar-lemon-lime_product_image-desktop.jpg/width1960.jpg",
+        "title": "Coca-Cola 0.5л",
+        "subtitle": "Газированный напиток",
+        "price": 600
+    },
+    {
+        "id": 1,
+        "imgurl": "https://www.coca-cola.com/content/dam/onexp/kz/ru/brand-sprite/packshot%20desktop.jpg/width1960.jpg",
+        "title": "Sprite 0.5л",
+        "subtitle": "Газированный напиток",
+        "price": 600
+    },
+    {
+        "id": 2,
+        "imgurl": "https://www.coca-cola.com/content/dam/onexp/kz/ru/home-images/brands/bonaqua/bonaqua-still_product_image%20desktop.jpg/width1960.jpg",
+        "title": "Bonaqua 0.5л",
+        "subtitle": "Вода",
+        "price": 500
+    }
+]
