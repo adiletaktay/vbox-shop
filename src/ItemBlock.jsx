@@ -1,26 +1,30 @@
 import React from "react";
 
-export const SnacksBlock = ({imgurl, title, subtitle, price}) => {
-    const [snackCount, setSnackCount] = React.useState(0);
+export const ItemBlock = ({imgurl, title, subtitle, price}) => {
+    const [itemCount, setItemCount] = React.useState(0);
 
     const onClickPlus = () => {
-        setSnackCount(snackCount + 1);
+        setItemCount(itemCount + 1);
     };
     
     const onClickMinus = () => {
-        setSnackCount(snackCount - 1);
+      setItemCount(itemCount - 1);
     };
 
     return (
-        <div className="snacks-block">
-            <img className="snacks-block__image" src={imgurl} alt="Drinks" />
-            <div className="snacks-block__title">{title}</div>
-            <div className="snacks-block__subtitle">{subtitle}</div>
-            <div className="snacks-block__price">цена {price} ₸</div>
-            <div className="snacks-block__bottom">
+        <div className="item-block">
+            <img className="item-block__image" src={imgurl} alt="item" />
+            <div className="item-block__info">
+              <div className="item-block__title">{title}</div>
+              <div className="item-block__subtitle">{subtitle}</div>
+            </div>
+            <div className="item-block__number">
+              <div className="item-block__price">цена {price} ₸</div>
+              <div className="item-block__bottom">
+            </div>
                 <div className="count__control">
-                <button disabled={snackCount === 0} onClick={onClickMinus} className="button button--delete">
-                    <svg
+                <button disabled={itemCount === 0} onClick={onClickMinus} className="button button--delete">
+                <svg
                     width="10"
                     height="10"
                     viewBox="0 0 10 10"
@@ -33,7 +37,8 @@ export const SnacksBlock = ({imgurl, title, subtitle, price}) => {
                         ></path>
                     </svg>
                 </button>
-                <i>{snackCount}</i>
+
+                <b>{itemCount}</b>
                 <button onClick={onClickPlus} className="button button--add">
                 <svg
                   width="10"

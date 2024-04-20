@@ -13,8 +13,6 @@ export const Header = () => {
         </div>
       </Link>
       <Link to="/cart" className="button button--cart header__cart">
-        <span>500 ₸</span>
-        <div className="button__delimiter"></div>
           <svg
             width="18"
             height="18"
