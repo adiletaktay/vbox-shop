@@ -1,15 +1,17 @@
 import { ItemBlock } from './ItemBlock'
 
-import drink from './data/drinks.json'
-import snack from './data/snacks.json'
+import items from './data/items.json'
 
 export const Home = () => {
+
+    const drinks = items.filter(item => item.category == "drink")
+    const snack = items.filter(item => item.category == "snack")
 
     return (
       <>
       <h2>Напитки</h2>
       <div className='drinks'>
-        {drink.map((obj) => (
+        {drinks.map((obj) => (
           <ItemBlock {...obj} key={obj.id} />
         ))}
       </div>

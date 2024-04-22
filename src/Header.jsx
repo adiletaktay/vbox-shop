@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import shopPng from '../public/shop.png'
 
 export const Header = () => {
+  const { items } = useSelector(state => state.cart);
+  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+
   return (
     <div className="header container">
       <Link to="/" className="header__logo">
@@ -41,7 +45,7 @@ export const Header = () => {
               strokeLinejoin="round"
             />
           </svg>
-        <span>1</span>
+        <span>{totalCount}</span>
       </Link>
     </div>
   );

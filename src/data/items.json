@@ -1,0 +1,50 @@
+[
+    {
+        "id": 0,
+        "imgurl": "https://www.coca-cola.com/content/dam/onexp/kz/ru/homepage-images/brands/coca-cola/coca-cola-zero-sugar-lemon-lime_product_image-desktop.jpg/width1960.jpg",
+        "title": "Coca-Cola 0.5л",
+        "subtitle": "Газированный напиток",
+        "price": 600,
+        "category": "drink"
+    },
+    {
+        "id": 1,
+        "imgurl": "https://www.coca-cola.com/content/dam/onexp/kz/ru/brand-sprite/packshot%20desktop.jpg/width1960.jpg",
+        "title": "Sprite 0.5л",
+        "subtitle": "Газированный напиток",
+        "price": 600,
+        "category": "drink"
+    },
+    {
+        "id": 2,
+        "imgurl": "https://www.coca-cola.com/content/dam/onexp/kz/ru/home-images/brands/bonaqua/bonaqua-still_product_image%20desktop.jpg/width1960.jpg",
+        "title": "Bonaqua 0.5л",
+        "subtitle": "Вода",
+        "price": 500,
+        "category": "drink"
+    },
+    {
+        "id": 4,
+        "imgurl": "https://galmart.kz/media/goods/32f76cf70aa24e30a8706982a769ac46.webp",
+        "title": "Snickers",
+        "subtitle": "Шоколадный батончик",
+        "price": 550,
+        "category": "snack"
+    },
+    {
+        "id": 5,
+        "imgurl": "https://galmart.kz/media/goods/5d63edb2f15245bbb0e204354554f191.jpg",
+        "title": "Kinder Bueno",
+        "subtitle": "Вафли",
+        "price": 450,
+        "category": "snack"
+    },
+    {
+        "id": 6,
+        "imgurl": "https://galmart.kz/media/goods/db09f24679ab41b6bf52d57c8e8d4ee0.jpg",
+        "title": "Roshen",
+        "subtitle": "Шоколадный",
+        "price": 500,
+        "category": "snack"
+    }
+]

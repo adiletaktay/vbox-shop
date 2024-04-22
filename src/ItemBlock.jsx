@@ -1,14 +1,31 @@
-import React from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem, minusItem } from './redux/CartSlice';
 
-export const ItemBlock = ({imgurl, title, subtitle, price}) => {
-    const [itemCount, setItemCount] = React.useState(0);
+export const ItemBlock = ({id, imgurl, title, subtitle, price}) => {
+    const dispatch = useDispatch();
+    
+    const cartItem = useSelector(state => state.cart.items.find(obj => obj.id === id));
+
+    const addedCount = cartItem ? cartItem.count : 0;
 
     const onClickPlus = () => {
-        setItemCount(itemCount + 1);
+        const item = {
+          id,
+          title, 
+          subtitle, 
+          price
+        }
+        dispatch(addItem(item));
     };
     
     const onClickMinus = () => {
-      setItemCount(itemCount - 1);
+      const item = {
+        id,
+        title, 
+        subtitle, 
+        price
+      }
+      dispatch(minusItem(item));
     };
 
     return (
@@ -23,7 +40,7 @@ export const ItemBlock = ({imgurl, title, subtitle, price}) => {
               <div className="item-block__bottom">
             </div>
                 <div className="count__control">
-                <button disabled={itemCount === 0} onClick={onClickMinus} className="button button--delete">
+                <button disabled={addedCount === 0} onClick={onClickMinus} className="button button--delete">
                 <svg
                     width="10"
                     height="10"
@@ -37,8 +54,7 @@ export const ItemBlock = ({imgurl, title, subtitle, price}) => {
                         ></path>
                     </svg>
                 </button>
-
-                <b>{itemCount}</b>
+                <b>{addedCount}</b>
                 <button onClick={onClickPlus} className="button button--add">
                 <svg
                   width="10"
