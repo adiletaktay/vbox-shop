@@ -27,7 +27,7 @@ function CartItem({ id, title, subtitle, price, count }) {
         <b>{price} ₸</b>
       </div>
       <div className="cart__item-count count__control">
-        <button onClick={onClickMinus} className="button button--delete">
+        <button disabled={count === 0} onClick={onClickMinus} className="button button--delete">
             <svg
               width="10"
               height="10"

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import shopPng from '../public/shop.png'
@@ -6,6 +6,8 @@ import shopPng from '../public/shop.png'
 export const Header = () => {
   const { items } = useSelector(state => state.cart);
   const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+
+  const location = useLocation();
 
   return (
     <div className="header container">
@@ -16,6 +18,7 @@ export const Header = () => {
           <p>Онлайн интернет-магазин</p>
         </div>
       </Link>
+      {location.pathname !== '/cart' && (
       <Link to="/cart" className="button button--cart header__cart">
           <svg
             width="18"
@@ -47,6 +50,7 @@ export const Header = () => {
           </svg>
         <span>{totalCount}</span>
       </Link>
+      )}
     </div>
   );
 }
