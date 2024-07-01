@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
-import cartEmpty from "./assets/cartEmpty.svg";
+import cartEmpty from "./assets/icons/cartEmpty.svg"
 
 const CartEmpty = () => {
   return (
@@ -16,7 +16,7 @@ const CartEmpty = () => {
         <span>Вернуться назад</span>
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default CartEmpty;
+export default CartEmpty

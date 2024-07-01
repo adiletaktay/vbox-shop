@@ -1,31 +1,26 @@
-import { Link, useLocation } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { Link, useLocation } from "react-router-dom"
+import { useSelector } from "react-redux"
 
-import shopPng from '../public/shop.png'
+import shopPng from "./assets/icons/shop.png"
 
 export const Header = () => {
-  const { items } = useSelector(state => state.cart);
-  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+  const { items } = useSelector(state => state.cart)
+  const totalCount = items.reduce((sum, item) => sum + item.count, 0)
 
-  const location = useLocation();
+  const location = useLocation()
 
   return (
     <div className="header container">
       <Link to="/" className="header__logo">
         <img src={shopPng} alt="Shop logo" />
-        <div className='header-title'>
+        <div className="header-title">
           <h1>Vbox</h1>
           <p>Онлайн интернет-магазин</p>
         </div>
       </Link>
-      {location.pathname !== '/cart' && (
-      <Link to="/cart" className="button button--cart header__cart">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 18 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+      {location.pathname !== "/cart" && (
+        <Link to="/cart" className="button button--cart header__cart">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6.33333 16.3333C7.06971 16.3333 7.66667 15.7364 7.66667 15C7.66667 14.2636 7.06971 13.6667 6.33333 13.6667C5.59695 13.6667 5 14.2636 5 15C5 15.7364 5.59695 16.3333 6.33333 16.3333Z"
               stroke="white"
@@ -48,9 +43,9 @@ export const Header = () => {
               strokeLinejoin="round"
             />
           </svg>
-        <span>{totalCount}</span>
-      </Link>
+          <span>{totalCount}</span>
+        </Link>
       )}
     </div>
-  );
+  )
 }
