@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom"
 import { useSelector } from "react-redux"
+import React from "react"
 
 import shopPng from "./assets/icons/shop.png"
 
@@ -8,6 +9,15 @@ export const Header = () => {
   const totalCount = items.reduce((sum, item) => sum + item.count, 0)
 
   const location = useLocation()
+  const isMounted = React.useRef(false)
+
+  React.useEffect(() => {
+    if (isMounted.current) {
+      const json = JSON.stringify(items)
+      localStorage.setItem("cart", json)
+    }
+    isMounted.current = true
+  }, [items])
 
   return (
     <div className="header container">
