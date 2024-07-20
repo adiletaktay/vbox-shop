@@ -12,7 +12,7 @@ export const CartEmpty = () => {
         Для того, чтобы выбрать товар, перейди на главную страницу.
       </p>
       <img src={cartEmpty} alt="Empty cart" />
-      <Link to="/" className="button button--black">
+      <Link to="/vbox-shop" className="button button--black">
         <span>Вернуться назад</span>
       </Link>
     </div>

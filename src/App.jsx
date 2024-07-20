@@ -12,9 +12,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route path="" element={<Home />} />
+        <Route path="vbox-shop" element={<Home />} />
         <Route
-          path="Cart"
+          path="vbox-shop/Cart"
           element={
             <Suspense fallback={<div>Идёт загрузка корзины ...</div>}>
               <Cart />
