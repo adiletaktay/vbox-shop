@@ -30,7 +30,7 @@ export const ItemBlock = ({ id, imgurl, title, subtitle, price }) => {
 
   return (
     <div className="item-block">
-      <img className="item-block__image" src={imgurl} alt="item" />
+      <img className="item-block__image" src={imgurl} alt="item" loading="lazy" />
       <div className="item-block__info">
         <div className="item-block__title">{title}</div>
         <div className="item-block__subtitle">{subtitle}</div>

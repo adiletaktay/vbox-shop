@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import cartEmpty from "./assets/icons/cartEmpty.svg"
+import cartEmpty from "/icons/cartEmpty.svg"
 
 export const CartEmpty = () => {
   return (
@@ -11,7 +11,7 @@ export const CartEmpty = () => {
         <br />
         Для того, чтобы выбрать товар, перейди на главную страницу.
       </p>
-      <img src={cartEmpty} alt="Empty cart" />
+      <img src={cartEmpty} alt="Empty cart" loading="lazy" />
       <Link to="/vbox-shop" className="button button--black">
         <span>Вернуться назад</span>
       </Link>

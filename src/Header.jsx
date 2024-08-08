@@ -1,8 +1,8 @@
-import { Link, useLocation } from "react-router-dom"
-import { useSelector } from "react-redux"
 import React from "react"
+import { useSelector } from "react-redux"
+import { Link, useLocation } from "react-router-dom"
 
-import shopPng from "../public/shop.png"
+import shopPng from "/shop.png"
 
 export const Header = () => {
   const { items } = useSelector(state => state.cart)
@@ -22,7 +22,7 @@ export const Header = () => {
   return (
     <div className="header container">
       <Link to="/vbox-shop" className="header__logo">
-        <img src={shopPng} alt="Shop logo" />
+        <img src={shopPng} alt="Shop logo" loading="lazy" />
         <div className="header-title">
           <h1>Vbox</h1>
           <p>Онлайн интернет-магазин</p>

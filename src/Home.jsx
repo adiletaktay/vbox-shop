@@ -1,10 +1,10 @@
 import { ItemBlock } from "./ItemBlock"
-import cola from "./assets/img/cola.webp"
-import sprite from "./assets/img/sprite.webp"
-import bonaqua from "./assets/img/bonaqua.webp"
-import kinder from "./assets/img/kinder.jpg"
-import snickers from "./assets/img/snickers.webp"
-import roshen from "./assets/img/roshen.jpg"
+import bonaqua from "/img/drinks/bonaqua.webp"
+import cola from "/img/drinks/cola.webp"
+import sprite from "/img/drinks/sprite.webp"
+import kinder from "/img/snacks/kinder.jpg"
+import roshen from "/img/snacks/roshen.jpg"
+import snickers from "/img/snacks/snickers.webp"
 
 export const Home = () => {
   const items = [
